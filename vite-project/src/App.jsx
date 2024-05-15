@@ -1,5 +1,5 @@
 import './App.css'
-import { Cabecalho, Conteudo } from './components'
+import { Cabecalho, Conteudo, Rodape } from './components'
 
 function App() {
   return (
@@ -9,6 +9,9 @@ function App() {
         <h1>Titulo</h1>
         <p>Texto texto texto</p>
       </Conteudo>
+      <footer>
+        <Rodape authorName='Romanhole'/>
+      </footer>
     </>
   )
 }
