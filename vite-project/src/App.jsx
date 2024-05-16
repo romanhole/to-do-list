@@ -1,13 +1,13 @@
 import './App.css'
 import { Cabecalho, Conteudo, Rodape } from './components'
+import { Inicial } from './pages'
 
 function App() {
   return (
     <>
       <Cabecalho/>
       <Conteudo>
-        <h1>Titulo</h1>
-        <p>Texto texto texto</p>
+        <Inicial/>
       </Conteudo>
       <footer>
         <Rodape authorName='Romanhole'/>
