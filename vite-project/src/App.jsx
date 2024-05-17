@@ -1,18 +1,22 @@
-import './App.css'
+import { BrowserRouter } from 'react-router-dom'
+
 import { Cabecalho, Conteudo, Rodape } from './components'
 import { Inicial } from './pages'
 
+import { Router } from './Router'
+
+import './App.css'
+
 function App() {
   return (
-    <>
-      <Cabecalho/>
+    <BrowserRouter>
+      <Router />
+      {/* <Cabecalho/>
       <Conteudo>
         <Inicial/>
       </Conteudo>
-      <footer>
-        <Rodape authorName='Romanhole'/>
-      </footer>
-    </>
+      <Rodape authorName='Romanhole'/> */}
+    </BrowserRouter>
   )
 }
 
