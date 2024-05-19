@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Botao, CampoTexto } from "../../components"
+import { Botao, CampoTexto, Loading } from "../../components"
 
 import style from './FormCriarTarefa.module.css'
 import { UseAppContext } from "../../hooks"
@@ -7,7 +7,7 @@ import { UseAppContext } from "../../hooks"
 const FormCriarTarefa = () => {
     const [nomeTarefa, setNomeTarefa] = useState('')
 
-    const { adicionarTarefa } = UseAppContext()
+    const { adicionarTarefa, loadingCriar } = UseAppContext()
 
     const onChangeNomeTarefa = (event) => {
         setNomeTarefa(event.currentTarget.value)
@@ -31,7 +31,7 @@ const FormCriarTarefa = () => {
                 value={nomeTarefa} 
                 onChange={onChangeNomeTarefa}
             />
-            <Botao texto="+"/>
+            <Botao texto={ loadingCriar ? <Loading /> : "+"}/>
         </form>
     )
 }
